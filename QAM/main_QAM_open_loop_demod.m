@@ -39,11 +39,14 @@ if is_ideal
     rxSignal = upfirdn(rxSignal, rcosFilter / sum(rcosFilter), 1);
     rxSignal = rxSignal(groupDelay(rcosFilter)+1: groupDelay(rcosFilter)+sps*dataLength);
     demod_Nsym = dataLength;
+    figure;
+    scatterIQ(rxSignal);
+    title("directly sample with timing error");
     % -- phase error
     phase_err = 30;
     rxSignal = rxSignal .* exp(1j * deg2rad(phase_err));
 else % load from samples
-    %% parameter % load
+    %% parameter & load
     beta = 0.3;
     max_demod_Nsym = 800;
     % load data
