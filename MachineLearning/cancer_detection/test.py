@@ -4,5 +4,3 @@ positiveSample_list = findPositiveSamples()
 
 series_uid = positiveSample_list[11][2]
 showCandidate(series_uid)
-
-plt.show()
