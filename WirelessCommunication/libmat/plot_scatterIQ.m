@@ -12,8 +12,10 @@ function [] = plot_scatterIQ(data, plot_cfg)
     end
     grid on;
     % auto-scale.
-    max_x = max(abs (real (data))) * 1.2;
-    max_y = max(abs(imag(data))) * 1.2;
-    xlim ([-max_x, max_x]);
-    ylim ([-max_y, max_y]);
+    max_x = max(max(abs(real(data))));
+    max_y = max(max(abs(imag(data))));
+
+    mm = max(max_x, max_y) * 1.2;
+    xlim ([-mm, mm]);
+    ylim ([-mm, mm]);
 end

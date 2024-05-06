@@ -1,3 +1,11 @@
+% @file main_UMTS_DL_demodulate.m
+% @brief In this script, I demonstrate a precedure to synchronize with
+%        UMTS/WCDMA downlink signal. With searching PSCH/SSCH technics to get
+%        synchornization of frame and determination of primary scrambling
+%        code. Finnally, I demodulate a PCPICH(the Common Pilot Channel) to
+%        calculate the EVM, and do a simple power normalization and phase
+%        correction with PCPIPCH.
+
 close all
 
 sps = 16;
@@ -74,10 +82,10 @@ end
 linkaxes (axx, 'xy')
 
 %% demodulate
-% 解扰
-SC = code.scrambling_code(16 * (8*PrimaryCodeGroup+PrimaryScramblingCodeIdx), 38400);% 主犹码
+% de-scrambling
+SC = code.scrambling_code(16 * (8*PrimaryCodeGroup+PrimaryScramblingCodeIdx), 38400);% primary scrambling code
 wave = frcWaveform(1:38400).*conj(SC);
-% 解扩
+% de-channelizing
 ovsf_pcpich = code.OVSF(256, 0);
 c_pcpich = dechannelization(wave, ovsf_pcpich);
 c_pcpich_m = mean(c_pcpich);

@@ -1,6 +1,8 @@
 close all
 % @brief: TM4 only have PSCH, SSCH, PCCPCH.
 %         here we will discuss the demodulation of PCCPCH
+%         Additionally, I also implement a simple frequency offset
+%         estimation via PSCH/SSCH signals.
 
 %% Generation of UMTS DL
 preconfigParams = umtsDownlinkReferenceChannels('TM4'); % Get H-Set parameters
@@ -65,7 +67,3 @@ c_pccpch = dechannelization(wave, pccpch_ovsf);
 
 figure;
 plot_scatterIQ(c_pccpch)
-
-% evm = comm.EVM;
-% e = evm(c_pcpich, repmat(1+1j, 150, 1));
-% fprintf('EVM of P-CPICH: %.2f %%\n', e);
