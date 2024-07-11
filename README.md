@@ -9,7 +9,10 @@ Another thing to consider is that AI will become a new type of tool, just like t
 ## Things in the notes.
 - Math
   - [Cubic interpretion](./Mathematics/cubic_spline.ipynb)
+  - [Segmental Fast cross-correlation algorithm](./Mathematics/segmental_xcorr.ipynb)
 - Wireless Communication
+  - Digital signal processing
+    - [Design a complex value FIR filter based on frequency response](./WirelessCommunication/DSP/complex-FIR.ipynb)
   - Traditional QAM
     - [QAM timing and phase estimation in open loop](./WirelessCommunication/QAM/QAM_timing_phase_estimation.ipynb)
   - MIMO and OFDM
