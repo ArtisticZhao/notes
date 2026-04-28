@@ -20,3 +20,5 @@ Another thing to consider is that AI will become a new type of tool, just like t
       - [Maximum ratio combining receiver](./WirelessCommunication/MIMO/main_MRC_rayleigh.m)
       - [Tx diversity based on Alamouti coding](./WirelessCommunication/MIMO/main_Alamouti_rayleigh.m)
 - [Machine learning](./MachineLearning/README.md)
+- Digital Signal Processing (DSP)
+  - [FIR 滤波器设计：窗函数法与等波纹法](./DSP/fir_window_design.ipynb)
