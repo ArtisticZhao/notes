@@ -19,6 +19,8 @@ Another thing to consider is that AI will become a new type of tool, just like t
     - Diversity
       - [Maximum ratio combining receiver](./WirelessCommunication/MIMO/main_MRC_rayleigh.m)
       - [Tx diversity based on Alamouti coding](./WirelessCommunication/MIMO/main_Alamouti_rayleigh.m)
+  - 6G waveform
+    - [AFDM 仿射频分复用：调制/解调仿真笔记（时延+多普勒双弥散信道）](./WirelessCommunication/AFDM/afdm_modulation_notes.ipynb)
 - [Machine learning](./MachineLearning/README.md)
 - Digital Signal Processing (DSP)
   - [FIR 滤波器设计：窗函数法与等波纹法](./DSP/fir_window_design.ipynb)
